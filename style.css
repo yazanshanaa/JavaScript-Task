@@ -51,3 +51,20 @@ h2 {
 .inputGroup button:hover {
   background-color: #04505e;
 }
+
+.filters {
+  display: flex;
+  justify-content: center;
+  column-gap: 5%;
+  margin-bottom: 20px;
+}
+
+.filters button {
+  border: none;
+    color: white;
+    background-color: #0096B2;
+    padding-left: 13%;
+    padding-right: 13%;
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
