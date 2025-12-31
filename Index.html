@@ -1,18 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>JavaScript Task</title>
-  <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="./style.css" />
+  <title>Todo App</title>
 </head>
 <body>
-
-  <h1>JavaScript Task</h1>
-
-  <div id="app">
-    <!-- Content will be added later -->
+  <h2>Todo Input</h2>
+  <div class="inputContainer">
+    <div class="inputGroup">
+      <input type="text" id="taskInput" placeholder="Enter a new task" />
+    </div>
+    <p id="validationMsg" class="hidden msg"></p>
+    <div class="inputGroup">
+      <button onclick="handleAddTask()">Add new task</button>
+    </div>
   </div>
 
-  <script src="js/main.js"></script>
+  
 </body>
 </html>
