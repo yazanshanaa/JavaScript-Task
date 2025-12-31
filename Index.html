@@ -18,6 +18,32 @@
     </div>
   </div>
 
-  
+  <h2>Todo List</h2>
+  <div class="filters">
+    <button onclick="filterTasks('all')">All</button>
+    <button onclick="filterTasks('done')">Done</button>
+    <button onclick="filterTasks('todo')">Todo</button>
+  </div>
+
+  <div class="task-list" id="taskList"></div>
+
+  <div class="bulk-actions">
+    <button onclick="deleteDoneTasks()">Delete Done Task</button>
+    <button onclick="handleDeleteAll()">Delete All Task</button>
+  </div>
+
+  <div id="modal" class="modal hidden">
+    <div class="modal-content">
+      <h2 id="modalTitle"></h2>
+      <input type="text" id="modalInput" class="hidden" maxlength="100" />
+      <p id="modalMsg" class="msg"></p>
+      <div class="modal-actions">
+        <button onclick="modalConfirm()" class="confirmButton">Confirm</button>
+        <button onclick="closeModal()" class="cancelButton secondary">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="./app.js"></script>
 </body>
 </html>
