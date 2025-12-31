@@ -12,6 +12,7 @@ h2 {
   text-align: center;
   margin-bottom: 20px;
 }
+
 .inputContainer {
   padding-left: 20px;
     padding-right: 20px;
@@ -68,6 +69,22 @@ h2 {
     padding-top: 6px;
     padding-bottom: 6px;
 }
+
+.task-list {
+  max-width: 800px;
+  margin: auto;
+}
+
+.task-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 8px;
+  border-radius: 5px;
+}
+
 .task-text {
   flex: 1;
 }
@@ -86,6 +103,7 @@ h2 {
 .task-actions input[type="checkbox"] {
   transform: scale(1.2);
 }
+
 .task-actions button {
   background: none;
   border: none;
@@ -99,4 +117,81 @@ h2 {
 
 .task-actions .delete {
   color: red;
+}
+
+.bulk-actions {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 30px;
+}
+
+.bulk-actions button {
+  padding: 10px;
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  flex: 1;
+}
+
+.msg {
+  font-size: 0.85rem;
+  color: #d32f2f;
+  margin-top: -10px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: grid;
+  place-items: center;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 6px;
+  width: 100%;
+  max-width: 320px;
+}
+
+.modal-content input {
+  width: 100%;
+  margin: 0.75rem 0;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: end;
+  gap: 0.5rem;
+}
+
+.confirmButton{
+    border: none;
+    border-radius: 8px;
+    color: white;
+    background-color: #0096B2;
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
+
+.cancelButton{
+    border: none;
+    border-radius: 8px;
+    color: white;
+    background-color: #a4281a;
+    padding-top: 6px;
+    padding-bottom: 6px;
 }
