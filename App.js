@@ -52,3 +52,26 @@ function renderTasks() {
         renderTasks();
       }
     }; 
+
+
+       const editBtn = document.createElement("button");
+    editBtn.innerHTML = "✍";
+    editBtn.className = "edit";
+    editBtn.onclick = () => {
+      openModal({
+        title: "Rename Task",
+        msg: "",
+        confirm: (newName) => {
+          if (isValidTask(newName)) {
+            const foundTask = tasks.find(t => t.id === task.id);
+            if (foundTask) {
+              foundTask.text = newName.trim();
+              saveTodos();
+              renderTasks();
+            }
+          }
+        },
+        needsInput: true,
+        defaultInput: task.text
+      });
+    };
