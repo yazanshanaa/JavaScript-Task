@@ -86,3 +86,17 @@ h2 {
 .task-actions input[type="checkbox"] {
   transform: scale(1.2);
 }
+.task-actions button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.task-actions .edit {
+  color: orange;
+}
+
+.task-actions .delete {
+  color: red;
+}
