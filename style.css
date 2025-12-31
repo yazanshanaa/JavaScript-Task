@@ -68,3 +68,21 @@ h2 {
     padding-top: 6px;
     padding-bottom: 6px;
 }
+.task-text {
+  flex: 1;
+}
+
+.task-text.done {
+  text-decoration: line-through;
+  color: red;
+}
+
+.task-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.task-actions input[type="checkbox"] {
+  transform: scale(1.2);
+}
