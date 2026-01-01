@@ -94,3 +94,24 @@ function renderTasks() {
         needsInput: false
       });
     };
+
+    actions.appendChild(checkbox);
+    actions.appendChild(editBtn);
+    actions.appendChild(deleteBtn);
+
+    taskItem.appendChild(taskText);
+    taskItem.appendChild(actions);
+    taskList.appendChild(taskItem);
+  });
+}
+
+function filterTasks(type) {
+  filter = type;
+  renderTasks();
+}
+
+function deleteDoneTasks() {
+  tasks = tasks.filter(t => !t.done);
+  saveTodos();
+  renderTasks();
+}
