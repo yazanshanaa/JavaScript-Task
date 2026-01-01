@@ -177,3 +177,24 @@ function openModal({ title, msg, confirm, needsInput, defaultInput = "" }) {
 function closeModal() {
   document.getElementById("modal").classList.add("hidden");
 }
+function modalConfirm() {
+  const input = document.getElementById("modalInput");
+  const msg = document.getElementById("modalMsg");
+
+  if (modalConfig.needsInput) {
+    const val = input.value.trim();
+    if (!isValidTask(val)) {
+      msg.textContent = "Name must be ≥ 5 characters and not start with a number.";
+      return;
+    }
+    modalConfig.confirm(val);
+  } else {
+    modalConfig.confirm();
+  }
+
+  closeModal();
+}
+
+// Initialize
+loadTodos();
+renderTasks();
