@@ -115,3 +115,38 @@ function deleteDoneTasks() {
   saveTodos();
   renderTasks();
 }
+
+function handleDeleteAll() {
+  if (tasks.length > 0) {
+    openModal({
+      title: "Delete All Tasks?",
+      msg: "Are you sure? if not press cancel.",
+      confirm: () => {
+        tasks = [];
+        saveTodos();
+        renderTasks();
+      },
+      needsInput: false
+    });
+  }
+}
+
+function handleAddTask() {
+  const input = document.getElementById("taskInput");
+  const msg = document.getElementById("validationMsg");
+  const text = input.value.trim();
+
+  if (!isValidTask(text)) {
+    msg.textContent = "Task must be ≥ 5 characters and not start with a number.";
+    msg.classList.remove("hidden");
+    return;
+  }
+  msg.classList.add("hidden");
+
+  tasks.push({
+    id: Date.now(),
+    text,
+    done: false
+  });
+
+  
