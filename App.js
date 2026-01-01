@@ -149,4 +149,31 @@ function handleAddTask() {
     done: false
   });
 
-  
+   saveTodos();
+  input.value = "";
+  renderTasks();
+}
+
+// Modal Logic
+let modalConfig = {};
+
+function openModal({ title, msg, confirm, needsInput, defaultInput = "" }) {
+  modalConfig = { confirm, needsInput };
+  document.getElementById("modalTitle").textContent = title;
+  document.getElementById("modalMsg").textContent = msg;
+  const input = document.getElementById("modalInput");
+
+  if (needsInput) {
+    input.classList.remove("hidden");
+    input.value = defaultInput;
+    input.focus();
+  } else {
+    input.classList.add("hidden");
+  }
+
+  document.getElementById("modal").classList.remove("hidden");
+}
+
+function closeModal() {
+  document.getElementById("modal").classList.add("hidden");
+}
